@@ -60,7 +60,7 @@ void Client::createTree(){//cut the long commend line into different node of the
     while (pch != NULL){
             
         //printf ("%s\n",pch); //print for test, take it out later
-        if( strcmp(pch, "\0") == 0 ){
+        if( strcmp(pch, "") == 0 ){
             listOp.push_back(pch);
             pch = strtok (NULL, "|&;");//continue cutting the string if needed
         
