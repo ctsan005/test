@@ -4,7 +4,9 @@
 class Base{
     public:
         Base(){};
-        ~Base(){};
+        ~Base(){
+            delete this;
+        };
         virtual bool run() = 0;
 };
 
