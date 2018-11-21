@@ -5,6 +5,8 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(rshell
 	tests/rshell.cpp
+	src/command.cpp
+	src/client.cpp
 ) 
 
 ADD_EXECUTABLE(test
