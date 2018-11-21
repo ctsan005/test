@@ -1,12 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
-#include "../src/and.h"
-#include "../src/all.h"
 #include "../src/client.h"
-#include "../src/command.h"
-#include "../src/container.h"
-#include "../src/or.h"
 #include <vector>
 #include "gtest/gtest.h"
 
