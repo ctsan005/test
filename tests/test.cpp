@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string>
 #include "../src/client.h"
+#include "../src/function.h"
 #include <vector>
 #include "gtest/gtest.h"
 

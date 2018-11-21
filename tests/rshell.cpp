@@ -1,6 +1,6 @@
 #include "../src/client.h"
-#include "../src/client.cpp"
-#include "../src/command.cpp"
+#include "../src/function.h"
+
 
 using namespace std;
  
