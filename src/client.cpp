@@ -16,7 +16,7 @@ void Client::createTree(){//cut the long commend line into different node of the
             // std::cout << temp;
             
     std::vector<char> connector;
-    for(int i = 0; i < fullCommand.length() - 1; ++i){//scan the full command to see what connector is there
+    for(unsigned i = 0; i < fullCommand.length() - 1; ++i){//scan the full command to see what connector is there
         if(temp[i] == '\0'){
             // std::cout << "hello";
         }
@@ -42,7 +42,7 @@ void Client::createTree(){//cut the long commend line into different node of the
             
             
     std::vector<Container*> indexConnector;
-    for(int i = 0; i < connector.size(); ++i){//from the last scan, build the connector
+    for(unsigned i = 0; i < connector.size(); ++i){//from the last scan, build the connector
         if(connector.at(i) == 'A'){
             indexConnector.push_back(new All());
         }
@@ -60,7 +60,7 @@ void Client::createTree(){//cut the long commend line into different node of the
     while (pch != NULL){
             
         //printf ("%s\n",pch); //print for test, take it out later
-        if(pch != ""){
+        if(pch != "\0"){
             listOp.push_back(pch);
             pch = strtok (NULL, "|&;");//continue cutting the string if needed
         
@@ -83,7 +83,7 @@ void Client::createTree(){//cut the long commend line into different node of the
         indexConnector.at(0)->setLeftChild(new Command(listOp.at(0)));
         indexConnector.at(0)->setRightChild(new Command(listOp.at(1)));
             
-        for(int i = 2; i < listOp.size(); ++i){
+        for(unsigned i = 2; i < listOp.size(); ++i){
             indexConnector.at(i - 1)->setLeftChild(indexConnector.at(i - 2));
             indexConnector.at(i - 1)->setRightChild(new Command(listOp.at(i)));
         }
